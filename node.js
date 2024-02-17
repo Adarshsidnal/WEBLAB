@@ -14,8 +14,7 @@ const con = mysql.createConnection({
 
 app.get('/', (req, res) => {
 
-    res.send(`
-<!DOCTYPE html>
+res.send(` <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -102,7 +101,7 @@ app.get('/books/view', (req, res) => {
         FROM book, authors
         WHERE book.authid = authors.author_id;
     `;
-
+             
     con.query(sql, (err, result) => {
         if (err) {
             console.error('Error retrieving books:', err);
@@ -156,7 +155,6 @@ app.get('/books/view', (req, res) => {
         res.send(htmlResponse);
     });
 });
-
 
 // app.get('/books/view', (req, res) => {
 //     const sql = `
@@ -250,4 +248,5 @@ app.post('/books/delete', (req, res) => {
         res.json({ message: 'Book deleted successfully' });
     });
 });
+
 app.listen(3000);
