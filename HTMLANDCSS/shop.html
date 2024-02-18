@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shop</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Online Shop</h1>
+        <div class="items">
+            <div class="item">
+                <h3>Item 1</h3>
+                <p>Price: $10</p>
+                <button class="add-to-cart" data-name="Item 1" data-price="10">Add to Cart</button>
+            </div>
+            <div class="item">
+                <h3>Item 2</h3>
+                <p>Price: $15</p>
+                <button class="add-to-cart" data-name="Item 2" data-price="15">Add to Cart</button>
+            </div>
+            <!-- Add more items here -->
+        </div>
+        <div class="cart">
+            <h2>Shopping Cart</h2>
+            <ul class="cart-items"></ul>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="bill">
+            <h2>Bill</h2>
+            <div class="bill-details"></div>
+        </div>
+    </div>
+
+    <script src="shop.js"></script>
+</body>
+
+</html>
